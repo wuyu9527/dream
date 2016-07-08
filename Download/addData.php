@@ -11,10 +11,10 @@
     $dao = new dao(0);
     $stick=new addStick();
     // $stick_num=$_POST['num'];
-    $stick_num = empty($_GET['num'])?null:$_GET['num'];
-    $stick_name= empty($_GET['name'])?null:$_GET['name'];
+    $stick_num = empty($_POST['num'])?null:$_POST['num'];
+    $stick_name= empty($_POST['name'])?null:$_POST['name'];
 
-    if(empty($_GET['name'])){
+    if(empty($_POST['name'])){
         $name=$stick->getStickName($stick_num);
         if($name=="0"||$name=="1"){
             return;
